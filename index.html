@@ -257,7 +257,7 @@
                         spaceReduction() {
                             fetch("https://cw2-after-school-activities.herokuapp.com/collection/lessons", {
                                 method: "PUT",
-                                headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
+                                headers: { "Content-Type": "application/json" },
                                 mode: "cors",
                                 body: JSON.stringify(this.orderDetails),
                             })
