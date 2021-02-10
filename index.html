@@ -209,7 +209,7 @@
                         //     event.preventDefault();
                         //     console.log("success");
                         // });
-                        fetch("http://localhost:3000/collection/lessons").then(function (response) {
+                        fetch("https://cw2-after-school-activities.herokuapp.com/collection/lessons").then(function (response) {
                             response.json().then(function (json) {
                                 afterSchool.lessons = json;
                             });
@@ -255,7 +255,7 @@
                             return lesson.availableInventory > this.cartItemCount(lesson.id);
                         },
                         spaceReduction() {
-                            fetch("http://localhost:3000/collection/lessons", {
+                            fetch("https://cw2-after-school-activities.herokuapp.com/collection/lessons", {
                                 method: "PUT",
                                 headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
                                 mode: "cors",
@@ -273,7 +273,7 @@
                                 this.orderDetails.productInfo.push(productObject);
                             }
 
-                            fetch("http://localhost:3000/collection/orders", {
+                            fetch("https://cw2-after-school-activities.herokuapp.com/collection/orders", {
                                 method: "POST",
                                 headers: { "Content-Type": "application/json" },
                                 mode: "cors",
