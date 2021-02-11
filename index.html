@@ -209,7 +209,8 @@
                         //     event.preventDefault();
                         //     console.log("success");
                         // });
-                        fetch("https://cw2-after-school-activities.herokuapp.com/collection/lessons").then(function (response) {
+
+                        fetch("https://cw2-after-school-activities.herokuapp.com/collection/lessons", { mode: "cors" }).then(function (response) {
                             response.json().then(function (json) {
                                 afterSchool.lessons = json;
                             });
