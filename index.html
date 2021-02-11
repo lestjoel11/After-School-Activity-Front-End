@@ -153,7 +153,6 @@
                 <div class="cart-title row justify-content-center" id="cart" v-if="cart.length>0 && state=='cart'">
                     <h2 class="text-center shadow-sm p-3 mb-2 rounded bg-info" v-if="state!='checkout'" style="color: whitesmoke">Cart</h2>
                 </div>
-                {{ cartItems }}
                 <div class="row d-flex justify-content-center" v-if="cartItems.length<=0 && state=='cart'">
                     <h1>
                         <button @click="page('lessons')" class="btn btn-lg btn-outline-dark btn-block mt-5">Your Cart is empty, Click here to go back to lessons</button>
@@ -259,7 +258,6 @@
                             fetch("https://cw2-after-school-activities.herokuapp.com/collection/lessons", {
                                 method: "PUT",
                                 headers: { "Content-Type": "application/json" },
-                                mode: "cors",
                                 body: JSON.stringify(this.orderDetails),
                             })
                                 .then((response) => response.json())
